@@ -16,7 +16,7 @@ const resultInfo = document.getElementById("resultInfo");
    BACKEND URL
    ============================== */
 
-const BACKEND_URL = "PASTE-YOUR-BACKEND-RENDER-URL-HERE";
+const BACKEND_URL = "https://question-ai-3.onrender.com";
 
 
 /* ==============================
