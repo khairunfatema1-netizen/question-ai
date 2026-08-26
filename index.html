@@ -1,0 +1,299 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Question AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="container">
+
+            <header>
+                <div class="logo">Q</div>
+
+                <div>
+                    <h1>Question AI</h1>
+                    <p>Smart Board Question Finder</p>
+                </div>
+            </header>
+
+
+            <section class="card">
+
+                <h2>Upload Question Papers</h2>
+
+                <p class="description">
+                    Upload board question papers and let AI find
+                    exactly the questions you need.
+                </p>
+
+
+                <label class="upload-box" for="fileInput">
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h3>Upload PDF or Images</h3>
+
+                    <p>
+                        Click here to select your question papers
+                    </p>
+
+                    <span>
+                        PDF, JPG, PNG
+                    </span>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    multiple
+                    accept=".pdf,.jpg,.jpeg,.png"
+                >
+
+                <div id="fileList"></div>
+
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label>Subject</label>
+
+                        <select id="subject">
+                            <option value="">Select Subject</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="physics">Physics</option>
+                            <option value="biology">Biology</option>
+                            <option value="mathematics">Mathematics</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>Chapter</label>
+
+                        <select id="chapter">
+
+                            <option value="">
+                                Select Chapter
+                            </option>
+
+                            <option value="1">
+                                Chapter 1
+                            </option>
+
+                            <option value="2">
+                                Chapter 2
+                            </option>
+
+                            <option value="3">
+                                Chapter 3
+                            </option>
+
+                            <option value="4">
+                                Chapter 4
+                            </option>
+
+                            <option value="5">
+                                Chapter 5
+                            </option>
+
+                            <option value="6">
+                                Chapter 6
+                            </option>
+
+                            <option value="7">
+                                Chapter 7
+                            </option>
+
+                            <option value="8">
+                                Chapter 8
+                            </option>
+
+                            <option value="all">
+                                All Chapters
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>Question Type</label>
+
+                        <select id="questionType">
+
+                            <option value="mcq">
+                                MCQ
+                            </option>
+
+                            <option value="cq">
+                                CQ
+                            </option>
+
+                            <option value="both">
+                                MCQ + CQ
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>Board</label>
+
+                        <select id="board">
+
+                            <option value="all">
+                                All Boards
+                            </option>
+
+                            <option value="dhaka">
+                                Dhaka
+                            </option>
+
+                            <option value="chittagong">
+                                Chittagong
+                            </option>
+
+                            <option value="rajshahi">
+                                Rajshahi
+                            </option>
+
+                            <option value="sylhet">
+                                Sylhet
+                            </option>
+
+                            <option value="comilla">
+                                Comilla
+                            </option>
+
+                            <option value="barisal">
+                                Barisal
+                            </option>
+
+                            <option value="dinajpur">
+                                Dinajpur
+                            </option>
+
+                            <option value="jessore">
+                                Jessore
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="year-section">
+
+                    <label>Year Range</label>
+
+                    <div class="year-inputs">
+
+                        <input
+                            type="number"
+                            id="startYear"
+                            placeholder="2020"
+                            min="2000"
+                            max="2030"
+                        >
+
+                        <span>to</span>
+
+                        <input
+                            type="number"
+                            id="endYear"
+                            placeholder="2026"
+                            min="2000"
+                            max="2030"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button id="generateButton">
+
+                    <span id="buttonText">
+                        🔍 Find Questions
+                    </span>
+
+                </button>
+
+
+                <div id="status" class="status hidden">
+
+                    <div class="loader"></div>
+
+                    <p id="statusText">
+                        Analyzing your question papers...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section
+                id="results"
+                class="card results hidden"
+            >
+
+                <div class="results-header">
+
+                    <div>
+                        <h2>Questions Found</h2>
+
+                        <p id="resultInfo">
+                            AI found matching questions.
+                        </p>
+                    </div>
+
+                    <span class="verified">
+                        ✓ Verified
+                    </span>
+
+                </div>
+
+
+                <div id="questionContainer"></div>
+
+            </section>
+
+
+            <footer>
+                <p>
+                    Question AI • AI-powered Board Question Finder
+                </p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
